@@ -1,0 +1,37 @@
+{
+    "list":[
+        {
+            "sm": "",
+            "id":"1111",
+            "type":"图文(单)",
+            "link":"www.baidu.com",
+            "link1":"www.taobao.com",
+            "bao":2000,
+            "click":1000,
+            "state":"投放中",
+            "address": "上海市普陀区金沙江路 1518 弄"
+        },
+        {
+            "sm": "",
+            "id":"2222",
+            "type":"图文(单)",
+            "link":"www.baidu.com",
+            "link1":"www.taobao.com",
+            "bao":2000,
+            "click":1000,
+            "state":"投放中",
+            "address": "上海市普陀区金沙江路 1518 弄"
+        },
+        {
+            "sm": "",
+            "id":"33333",
+            "type":"图文(单)",
+            "link":"www.baidu.com",
+            "link1":"www.taobao.com",
+            "bao":2000,
+            "click":1000,
+            "state":"投放中",
+            "address": "上海市普陀区金沙江路 1518 弄"
+        }
+    ]
+}
