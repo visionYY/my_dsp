@@ -17,7 +17,8 @@
         >
             <el-row>
                 <el-col :span="12">
-                    <el-input v-model="wenan"></el-input>
+                    <el-input v-model="wenan" @input='changeValue(wenan)' ref='wenan'></el-input>
+                    <span>{{len}}/18</span>
                 </el-col>
             </el-row>
         </el-form-item>
@@ -27,7 +28,7 @@
         >
             <el-row>
                 <el-col :span="12">
-                    <el-input v-model="links"></el-input>
+                    <el-input v-model="links" ></el-input>
                 </el-col>
             </el-row>
         </el-form-item>
@@ -41,7 +42,8 @@ export default {
     return {
       imageUrl: "",
       wenan:'',
-      links:''
+      links:'',
+      len:0
     };
   },
   methods: {
@@ -60,6 +62,12 @@ export default {
         this.$message.error("上传头像图片大小不能超过 2MB!");
       }
       return isJPG && isLt2M;
+    },
+    changeValue(wenan){
+      this.len = wenan.length
+      // console.log(this.$refs.wenan.$refs.input)
+      this.$refs.wenan.$refs.input.setAttribute('maxlength',18)
+      // console.log(wenan)
     }
   }
 };

@@ -4,6 +4,9 @@ let mutations = {
     },
     saveUser(state,payload){
         state.user = payload
+    },
+    xttList(state,payload){
+        state.list = payload
     }
 }
 

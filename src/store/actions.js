@@ -1,4 +1,4 @@
-import {login} from "../utils/request"
+import {login,list} from "../utils/request"
 let actions = {
     getToken({commit},{data,notify,router}){
         login(data).then((data)=>{
@@ -25,6 +25,11 @@ let actions = {
            
         })
 
+    },
+    getList({commit}){
+        list().then((data) => {
+            commit('xttList',data.list)
+        })
     }
 }
 

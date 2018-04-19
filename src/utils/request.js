@@ -44,9 +44,17 @@ Object.defineProperty(Vue.prototype,"$http",{
 export default instance
 
 //接口请求
-export function login(loginInfo){
+export function login(loginInfo){//登录接口
     return new Promise((resolve,reject)=>{
         instance.post("/dsp-admin/user/login",loginInfo).then(res=>{
+            resolve(res)
+        })
+    })
+}
+
+export function list(){//列表接口
+    return new Promise((resolve,reject)=>{
+        instance.post("/dsp-admin/user/list").then(res=>{
             resolve(res)
         })
     })

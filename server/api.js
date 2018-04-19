@@ -68,10 +68,10 @@ module.exports=function(app){
     })
 
     //获取列表
-    // app.post('/user/list',function(req,res){
-    //     let list = fs.readFileSync('planList.json',{encoding:"utf-8"});
-    //     res.json(JSON.parse(list))
-    // })
+    app.post('/dsp-admin/user/list',function(req,res){
+        let list = fs.readFileSync('./server/planList.json',{encoding:"utf-8"});
+        res.json(JSON.parse(list))
+    })
 
     //上传图片接口
     app.post('/user/upload',upload.single('file'),function(req,res) {
